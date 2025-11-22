@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: book-buddy-backend
+  data:
+    mongodb:
+      # ← THIS IS THE ONLY CHANGE YOU NEED
+      uri: mongodb+srv://gemred2002_db_user:I9xiNGeSRLun3zk8@cluster0.jjn6ruk.mongodb.net/bookbuddy?retryWrites=true&w=majority
+      #                                                                 ↑↑↑↑↑↑↑↑↑↑
+      #                                                   ADD THIS PART ↑↑↑↑↑↑↑↑↑↑
+
+server:
+  port: 8080
+
+jwt:
+  secret: this-is-a-very-secure-adewusi-oluwaferanmi-adedamolassssssd33  # 57 characters → perfect
+  expiration-ms: 86400000  # 24 hours
