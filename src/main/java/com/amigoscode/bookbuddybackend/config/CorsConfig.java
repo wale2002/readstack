@@ -1,3 +1,27 @@
+//package com.amigoscode.bookbuddybackend.config;
+//
+//import org.springframework.context.annotation.Bean;
+//import org.springframework.context.annotation.Configuration;
+//import org.springframework.web.cors.CorsConfiguration;
+//import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+//import org.springframework.web.filter.CorsFilter;
+//
+//@Configuration
+//public class CorsConfig {
+//
+//    @Bean
+//    public CorsFilter corsFilter() {
+//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+//        CorsConfiguration config = new CorsConfiguration();
+//        config.setAllowCredentials(true);
+//        config.addAllowedOrigin("https://readstackk.vercel.app"); // Frontend origin
+//        config.addAllowedHeader("*");
+//        config.addAllowedMethod("*");-
+//        source.registerCorsConfiguration("/**", config);
+//        return new CorsFilter(source);
+//    }
+//}
+
 package com.amigoscode.bookbuddybackend.config;
 
 import org.springframework.context.annotation.Bean;
@@ -14,9 +38,14 @@ public class CorsConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOrigin("https://readstackk.vercel.app"); // Frontend origin
+
+        // Allowed origins
+        config.addAllowedOrigin("https://readstackk.vercel.app");
+        config.addAllowedOrigin("http://localhost:2212");
+
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
+
         source.registerCorsConfiguration("/**", config);
         return new CorsFilter(source);
     }
