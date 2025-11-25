@@ -75,7 +75,6 @@
 //}
 
 
-
 package com.amigoscode.bookbuddybackend.model.embedded;
 
 import com.amigoscode.bookbuddybackend.model.enums.ShelfType;
@@ -229,7 +228,7 @@ public class UserBook {
     }
 
     public String getSmallCoverImageUrl() {
-        return smallCoverImageUrl;
+        return null;
     }
 
     public void setSmallCoverImageUrl(String smallCoverImageUrl) {
@@ -242,5 +241,8 @@ public class UserBook {
 
     public void setCategories(List<String> categories) {
         this.categories = categories;
+    }
+
+    public void setAuthor(String author) {
     }
 }
