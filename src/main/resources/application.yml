@@ -1,12 +1,26 @@
+##spring:
+##  application:
+##    name: book-buddy-backend
+##  data:
+##    mongodb:
+##      # ← THIS IS THE ONLY CHANGE YOU NEED
+##      uri: mongodb+srv://gemred2002_db_user:I9xiNGeSRLun3zk8@cluster0.jjn6ruk.mongodb.net/bookbuddy?retryWrites=true&w=majority
+##      #                                                                 ↑↑↑↑↑↑↑↑↑↑
+##      #                                                   ADD THIS PART ↑↑↑↑↑↑↑↑↑↑
+##
+##server:
+##  port: 8080
+##
+##jwt:
+##  secret: this-is-a-very-secure-adewusi-oluwaferanmi-adedamolassssssd33  # 57 characters → perfect
+##  expiration-ms: 86400000  # 24 hours
+#
 #spring:
 #  application:
 #    name: book-buddy-backend
 #  data:
 #    mongodb:
-#      # ← THIS IS THE ONLY CHANGE YOU NEED
 #      uri: mongodb+srv://gemred2002_db_user:I9xiNGeSRLun3zk8@cluster0.jjn6ruk.mongodb.net/bookbuddy?retryWrites=true&w=majority
-#      #                                                                 ↑↑↑↑↑↑↑↑↑↑
-#      #                                                   ADD THIS PART ↑↑↑↑↑↑↑↑↑↑
 #
 #server:
 #  port: 8080
@@ -14,6 +28,12 @@
 #jwt:
 #  secret: this-is-a-very-secure-adewusi-oluwaferanmi-adedamolassssssd33  # 57 characters → perfect
 #  expiration-ms: 86400000  # 24 hours
+#
+#cloudinary:
+#  cloud-name: dxjwfylkr
+#  api-key: 938687283415841
+#  api-secret: yvhhuax8c2pwbgp54dXJZCXE15M
+#  upload-preset: cmp_projects
 
 spring:
   application:
@@ -26,11 +46,11 @@ server:
   port: 8080
 
 jwt:
-  secret: this-is-a-very-secure-adewusi-oluwaferanmi-adedamolassssssd33  # 57 characters → perfect
-  expiration-ms: 86400000  # 24 hours
+  secret: this-is-a-very-secure-adewusi-oluwaferanmi-adedamolassssssd33
+  expiration-ms: 86400000
 
 cloudinary:
   cloud-name: dxjwfylkr
-  api-key: 938687283415841
-  api-secret: yvhhuax8c2pwbgp54dXJZCXE15M
+  api-key: ${CLOUDINARY_API_KEY:938687283415841}
+  api-secret: ${CLOUDINARY_API_SECRET:yvhhuax8c2pwbgp54dXJZCXE15M}
   upload-preset: cmp_projects
